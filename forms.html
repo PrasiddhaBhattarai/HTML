@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <style>
+        form{
+            line-height: 2;
+        }
+
+        input[type='submit']{
+            cursor: pointer;
+            border: 3px solid aqua;
+            outline: 2px ridge black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <big>
+            <h3>Please enter your registered email id and password</h3>
+        </big>
+    </header>
+    <main>
+        <form action="/userdatabase.php">
+            <input type="text" placeholder="enter your email id">
+            <input type="password" placeholder="password">
+            <hr>
+            <h3>Enter your gender</h3>
+            <label for="101">
+                <input type="radio" value="male" name="gender" id="101">male
+            </label>
+            <br>
+            <label for="102">
+                <input type="radio" value="female" name="gender" id="102">female
+            </label>
+            <br>
+            <label for="103">
+                <input type="radio" value="other" name="gender" id="103">other
+            </label>
+            <br><br>
+            <hr>
+            <h3>Which clubs have the chance to win Premier League</h3>
+            <!-- &emsp => means wide space -->
+            <!-- checked => initially select attribut for <input> -->
+            <label for="201">
+                <input type="checkbox" value="arsenal" name="plclubs" id="201">Arsenal
+            </label>&emsp;
+            <label for="202">
+                <input type="checkbox" value="manchester city" name="plclubs" id="202" checked>Manchester City
+            </label>&emsp;
+            <label for="203">
+                <input type="checkbox" value="chelsea" name="plclubs" id="203">Chelsea
+            </label>&emsp;
+            <label for="204">
+                <input type="checkbox" value="manchester united" name="plclubs" id="204">Manchester United
+            </label>
+            <br><br><hr>
+            <h3>Which is your favourite club</h3>
+            <!-- selected => intially select/chose attribute of <select> -->
+            <select name="clubs" id="301">
+                <option value="bristol rovers">Bristol Rovers</option>
+                <option value="barcelona" selected>Barcelona</option>
+                <option value="real madrid">Real Madrid</option>
+                <option value="manchester united">Manchester united</option>
+                <option value="arsenal">Arsenal</option>
+                <option value="chelsea">Chelsea</option>
+                <option value="manchester city">Manchester City</option>
+                <option value="bayern munich">Bayern Munich</option>
+                <option value="liverpool">Liverpool</option>
+                <option value="psg">PSG</option>
+                <option value="ac milan">AC Milan</option>
+                <option value="inter milan">Inter Milan</option>
+                <option value="juventus">Juventus</option>
+            </select>
+            <br><br><hr>
+            <textarea name="feedback" id="401" cols="100" rows="8" placeholder="please give your valuable feedback here"></textarea>
+            <br><br><hr>
+            <input type="submit" value="Submit gar" >
+            <hr>
+        </form>
+    </main>
+</body>
+</html>
